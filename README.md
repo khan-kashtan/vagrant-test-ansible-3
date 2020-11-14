@@ -20,7 +20,7 @@
 
 #### To manage instances:
   ```
-  vagrant up        # to create instances
+  vagrant up        # to create instances and run ansible test
   vagrant provision # to run ansible test
   vagrant halt      # to power off instances
   vagrant destroy   # to remove instances
