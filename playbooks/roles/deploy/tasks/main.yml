@@ -1,0 +1,15 @@
+---
+# tasks file for deploy
+- name: Get an application code
+  git:
+    repo: 'https://github.com/express42/reddit.git'
+    dest: /home/{{ deploy_user }}/reddit
+    version: monolith
+    force: yes
+  notify: reload puma
+
+- name: Bundle install
+  bundler:
+    state: present
+    chdir: /home/{{ deploy_user }}/reddit
+  notify: reload puma

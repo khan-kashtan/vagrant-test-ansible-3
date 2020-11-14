@@ -1,0 +1,6 @@
+---
+- name: Deploy bundler
+  hosts: appserver
+  become: yes
+  roles:
+    - deploy
